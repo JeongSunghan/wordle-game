@@ -17,7 +17,7 @@ function fetchAllWords() {
         answer = fiveLetterWords[Math.floor(Math.random() * fiveLetterWords.length)].toLowerCase();
 
         // ** 콘솔 나중에 지우기 디버깅용입니다!  **
-        console.log("오늘의 5글자 랜덤 단어:", answer);
+        // console.log("오늘의 5글자 랜덤 단어:", answer);
         
       } else {
         console.error("5글자 단어를 찾을 수 없습니다.");
