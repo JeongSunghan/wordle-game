@@ -1,19 +1,27 @@
 /* 타이틀 타이핑 애니메이션  */
 #wordle-title {
-    font-family: 'Courier', monospace; 
-    font-size: 50px;
-    color: white;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid white; 
-    display: inline-block;
-    width: max-content;
-    animation: blink-caret 0.7s step-end infinite; 
+  height: 60px;
+  line-height: 60px;
+  font-family: 'Courier', monospace;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  display: inline-block;
+  width: max-content;
+  animation: blink-caret 0.7s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
   }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: white; }
+
+  50% {
+    border-color: white;
   }
-  
+}
