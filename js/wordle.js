@@ -105,7 +105,10 @@ document.querySelector("#submitBtn").addEventListener("click", function () {
     const resultBox = document.createElement('div'); // div로 수정해서 이전 시도 표시
     resultBox.classList.add("input-box"); // 스타일을 적용할 클래스 추가
 
-    if (inputs[i].value.toLowerCase() === answer[i]) {
+    // 입력값이 없는 경우 처리 (빈 값도 회색 처리)
+    if (inputs[i].value.trim() === "") {
+      resultBox.classList.add("grey"); // 아무것도 입력하지 않은 칸을 회색으로 처리
+    } else if (inputs[i].value.toLowerCase() === answer[i]) {
       resultBox.classList.add("green"); // 정답 위치
       correctGuessCount++; // 맞춘 칸 수 증가
     } else if (answer.includes(inputs[i].value.toLowerCase())) {
@@ -114,7 +117,7 @@ document.querySelector("#submitBtn").addEventListener("click", function () {
       resultBox.classList.add("grey"); // 정답 아님
     }
 
-    resultBox.textContent = inputs[i].value.toLowerCase(); // 입력한 값을 div에 표시
+    resultBox.textContent = inputs[i].value.toLowerCase() || "_"; // 입력한 값이 없을 경우 '_'로 표시
     previousAttempt.appendChild(resultBox); // 이전 시도에 추가
   }
 
@@ -216,7 +219,7 @@ document.querySelectorAll('.input').forEach((input, index, array) => {
       // 너무 빠르게 넘어가서 지연시간 추가 해보기, 정안되면 버리기
       setTimeout(() => {
         array[index + 1].focus(); 
-      }, 150); 
+      }, 50); 
     }
   });
 
