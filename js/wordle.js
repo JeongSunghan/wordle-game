@@ -231,3 +231,5 @@ document.querySelectorAll('.input').forEach((input, index, array) => {
   });
 });
 
+// 수정
+
