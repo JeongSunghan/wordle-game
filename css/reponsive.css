@@ -1,0 +1,143 @@
+/* 작은 모바일 기기 (최소 너비 320px, 최대 너비 480px) */
+@media (max-width: 480px) {
+    #gameContainer {
+      padding: 10px;
+    }
+  
+    #inputContainer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .input {
+      width: 40px; 
+      height: 40px; 
+      font-size: 20px;
+      margin: 5px;
+    }
+  
+    button {
+      width: auto; 
+      max-width: 200px; 
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+  
+    #leaderboardIcon {
+      width: 30px;
+      height: 30px; 
+    }
+  
+    /* 팝업 창 스타일 조정 */
+    .popup-content {
+      width: 80%;
+      padding: 15px;
+    }
+  
+    /* 닉네임 입력 필드 조정 */
+    #nickname {
+      width: 90%;
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    #error-message {
+      font-size: 12px;
+    }
+  }
+  
+  /* 중간 크기 모바일 기기 (최소 너비 480px, 최대 너비 768px) */
+  @media (min-width: 480px) and (max-width: 768px) {
+    #gameContainer {
+      padding: 15px;
+    }
+  
+    #inputContainer {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .input {
+      width: 50px; 
+      height: 50px;
+      font-size: 24px;
+      margin: 5px;
+    }
+  
+    button {
+      width: auto;
+      max-width: 220px; 
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  
+    #leaderboardIcon {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .popup-content {
+      width: 80%;
+      padding: 20px;
+    }
+  
+    #nickname {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+    #error-message {
+      font-size: 14px;
+    }
+  }
+  
+  /* 태블릿 및 작은 데스크탑 (최소 너비 768px, 최대 너비 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #gameContainer {
+      padding: 20px;
+    }
+  
+    #inputContainer {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .input {
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      margin: 8px;
+    }
+  
+    button {
+      width: auto;
+      max-width: 250px;
+      padding: 14px 28px;
+      font-size: 18px;
+    }
+  
+    #leaderboardIcon {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .popup-content {
+      width: 70%;
+      padding: 25px;
+    }
+  
+    #nickname {
+      width: 90%;
+      padding: 12px;
+      font-size: 18px;
+    }
+  
+    #error-message {
+      font-size: 16px;
+    }
+  }
+  

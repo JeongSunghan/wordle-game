@@ -1,0 +1,56 @@
+/* 게임 시작 버튼 스타일 */
+button#startGameBtn {
+    background-color: #6aaa64; 
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: 10px 0;
+    width: 100%; 
+    max-width: 300px; 
+  }
+  
+  button#startGameBtn:hover {
+    background-color: #538d4e;
+  }
+  
+  button#startGameBtn:active {
+    background-color: #357a38;
+    transform: scale(0.98); 
+  }
+  
+  /* 기록 초기화 버튼 스타일 */
+  button#clearDataBtn {
+    background-color: #e74c3c; 
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: 10px 0;
+    width: 100%; 
+    max-width: 300px; 
+  }
+  
+  button#clearDataBtn:hover {
+    background-color: #c0392b;
+  }
+  
+  button#clearDataBtn:active {
+    background-color: #a93226;
+    transform: scale(0.98); 
+  }
+  
+  #buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  

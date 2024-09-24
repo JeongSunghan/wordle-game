@@ -1,0 +1,201 @@
+/* 전체 페이지 스타일 */
+body {
+  font-family: 'Poppins', sans-serif; 
+  background-color: #2b2b41; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle at center, #1a1a2e, #16213e, #0f3460);
+}
+
+h1, h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+h3 {
+  color: white;
+}
+
+/* 게임 보드 전체 컨테이너 */
+#gameContainer {
+  background-color: #121213;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); 
+  max-width: 500px;
+  width: 100%;
+  margin: 20px auto;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* 입력 필드 스타일 */
+.input {
+  width: 60px;
+  height: 60px;
+  font-size: 32px;
+  text-align: center;
+  background-color: #3a3a3c;
+  color: white;
+  border: 2px solid #3a3a3c;
+  border-radius: 10px;
+  margin: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.input:focus {
+  outline: none;
+  border-color: #565758;
+  transform: scale(1.05);
+}
+
+/* 상태에 따른 색상 변경 */
+.input-box {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  display: inline-block; 
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid #3a3a3c;
+  font-weight: bold;
+  color: white;
+  line-height: 50px; 
+}
+
+.attempt-row {
+  display: flex; 
+  justify-content: center; 
+}
+
+/* 정답과 위치가 전부 맞을 때 */
+.input-box.green {
+  background-color: #538d4e;
+  border-color: #538d4e;
+}
+
+/* 정답이 있지만 위치가 틀릴 때 */
+.input-box.yellow {
+  background-color: #de8e52;
+  border-color: #de8e52;
+}
+
+/* 정답이 아닌 경우 */
+.input-box.grey {
+  background-color: #3a3a3c;
+  border-color: #3a3a3c;
+}
+
+/* 제출 버튼 스타일 */
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #6aaa64;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+button:hover {
+  background-color: #538d4e;
+}
+
+button:active {
+  transform: scale(0.95); 
+}
+
+/* 입력 필드 및 버튼 컨테이너 */
+#inputContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* =====================리더보드 ========================== */
+
+/* 팝업창 전체 배경 */
+.popup {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명한 검정 배경 */
+  z-index: 1; 
+}
+
+/* 팝업창 내용 */
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1f1f33;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: center;
+  color: white;
+}
+
+/* 닫기 버튼 스타일 */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 리더보드 리스트 스타일 */
+#leaderboardList {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  color: white;
+  text-align: left;
+}
+
+#leaderboardList li {
+  margin-bottom: 8px;
+}
+
+/* 리더보드 아이콘 */
+#leaderboard img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: brightness(0) invert(1); /* 아이콘 색상을 하얀색으로 변경 */
+}
+
+
+/* 애니메이션을 추가하여 게임 요소를 부드럽게 */
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
