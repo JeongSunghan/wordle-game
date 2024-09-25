@@ -6,7 +6,6 @@ let startTime, endTime;
 let hintUsage = 0; // 힌트 사용 횟수
 const maxHints = 2; // 힌트 사용 가능 횟수
 
-
 // 단어를 가져오는 함수 - 전체 단어를 가져와서 5글자 단어만 필터링
 function fetchAllWords() {
   const apiUrl = "https://random-word-api.herokuapp.com/all";
@@ -167,16 +166,15 @@ function giveHint() {
     return;
   }
 
-  // 몇 번째 글자에 대한 힌트를 받을 것인지 묻는 프롬프트
   let hintIndex = prompt("몇 번째 글자의 힌트를 받으시겠습니까? (1~5 사이의 숫자를 입력하세요)");
   
-  // 입력된 값이 유효한 숫자인지 확인 (1~5 사이)
+  // 입력된 값이 유효 확인
   if (!hintIndex || isNaN(hintIndex) || hintIndex < 1 || hintIndex > 5) {
     alert("유효한 숫자를 입력하세요 (1~5).");
     return;
   }
 
-  // 인덱스 값 조정 (사용자는 1부터 입력하므로 0부터 시작하는 인덱스에 맞춤)
+  // 인덱스 값 조정
   hintIndex = parseInt(hintIndex) - 1;
 
   // 선택된 글자가 이미 맞춘 글자인지 확인
@@ -186,8 +184,7 @@ function giveHint() {
     return;
   }
 
-  // 선택된 글자에 대한 힌트 제공
-  alert("힌트: 정답의 " + (hintIndex + 1) + "번째 글자는 '" + answer[hintIndex].toLowerCase() + "' 입니다.");
+  alert("힌트: 정답의 " + (hintIndex + 1) + "번째 글자는 '" + answer[hintIndex].toUpperCase() + "' 입니다.");
   
   hintUsage++; // 힌트 사용 횟수 증가
 }

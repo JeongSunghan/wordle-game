@@ -24,6 +24,7 @@ h3 {
   color: white;
 }
 
+
 /* 게임 보드 전체 컨테이너 */
 #gameContainer {
   background-color: #121213;
@@ -36,6 +37,7 @@ h3 {
   margin: 20px auto;
   animation: fadeIn 1s ease-in-out; 
 }
+
 
 @keyframes fadeIn {
   0% { opacity: 0; transform: scale(0.95); }
