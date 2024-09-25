@@ -2,6 +2,7 @@
 @media (max-width: 480px) {
   #gameContainer {
     padding: 10px;
+    max-width: 85%;
   }
 
   #inputContainer {
