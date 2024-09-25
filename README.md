@@ -1,4 +1,4 @@
-# 워들 게임 🎮
+# Wordle 게임 🎮
 웹 기반의 워들 클론 게임으로, **HTML**, **CSS**, **JavaScript**로 제작되었습니다.
 
 플레이 : https://jeongsunghan.github.io/wordle-game/
