@@ -31,7 +31,7 @@ wordle-game/
 ├── js/                      # 자바스크립트 파일
 │   ├── wordle.js             # 게임 핵심 로직
 │   ├── movewordle.js         # 배경 움직임 로직
-│   └── wordleStorageRest.js  # 리더보드 저장 로직
+│   └── wordleStorageRest.js  # 리더보드 기록 초기화 로직
 │
 ├── image/                   # 이미지 파일
 │   └── leaderboard.png       # 리더보드 아이콘
